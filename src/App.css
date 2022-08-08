@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+	font-size: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+	font-size: 1.6rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+	font-size: 2rem;
+	text-transform: uppercase;
 }
-
-.App-link {
-  color: #61dafb;
+.container {
+	max-width: 1000px;
+	padding: 0 1.5rem;
+	margin: 0 auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chart-holder {
+	margin: 0 0 5rem;
+	padding: 0;
+	list-style: none;
+}
+.chart-holder h2 {
+	font-size: 2rem;
+	font-weight: 400;
+	flex-shrink: 0;
+}
+.chart-holder li {
+	display: flex;
+}
+.chart-holder li .bar {
+	flex-grow: 1;
+	background: #eee;
+	max-width: 85%;
+	margin-left: auto;
+}
+.chart-holder li .progress {
+	display: inline-flex;
+	align-items: center;
+	height: 100%;
+	background: lightblue;
+	position: relative;
+}
+.chart-holder li .value {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.btn {
+	border: 1px solid lightblue;
+	background: lightblue;
+	display: block;
+	margin: 0 auto;
+	font-size: 1.6rem;
+	padding: 1rem 2rem;
+	cursor: pointer;
+}
+.btn:hover {
+	background: transparent;
+}
+@media screen and (max-width: 991px) {
+	.chart-holder li .bar {
+		max-width: 75%
+	}
+}
+@media screen and (max-width: 768px) {
+	.chart-holder li {
+		flex-direction: column;
+		align-items: center;
+	}
+	.chart-holder li .bar{ 
+		width: 100%;
+		max-width: 100%;
+		height: 3rem;
+	}
 }
